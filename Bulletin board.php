@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>簡易掲示板</title>
+    <title>Bulletin board</title>
 </head>
 <body>
     <h1>簡易掲示板</h1>
