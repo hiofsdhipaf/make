@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <title>mission_5-1</title>
+    <title>簡易掲示板</title>
 </head>
-
 <body>
     <h1>簡易掲示板</h1>
-    
     <?php
     // DB接続設定
     $dsn = 'データーベース名';//DB名は$dsuと名付ける
@@ -25,9 +22,6 @@
 	. "DATETIME DATETIME"
 	.");";
 	$stmt = $pdo->query($sql);
-	
-	
-	
     // 新規投稿
 //もし名前(name)が空でなく、コメント(comment)の空ではなく、パスワードも(pass)も空でなく、編集番号(edit)が空なら
 if(!empty($_POST["name"])&&!empty($_POST["comment"])&&!empty($_POST["pass"]) && empty($_POST["edit_num"])){
@@ -91,7 +85,6 @@ if(!empty($_POST["edit_num"]) && !empty($_POST["name"]) && !empty($_POST["commen
 	$sql->execute();
 }   
 ?>
-    
     <!--入力フォーム-->
     <form action="" method="post" name="write">
         <input type="text" name="name" placeholder="名前" value="<?php if(isset($edit_name)){echo $edit_name;} ?>" required><br>
